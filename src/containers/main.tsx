@@ -6,7 +6,7 @@ import {
   Navigate,
 } from "react-router-dom";
 import Home from "../pages/home/Home";
-import Splash from "../pages/splash/splash";
+// import Splash from "../pages/splash/splash";
 // import Education from "../pages/education/EducationComponent";
 // import Experience from "../pages/experience/Experience";
 // import Opensource from "../pages/opensource/Opensource";
@@ -27,15 +27,16 @@ const MainContainer: React.FC<MainContainerProps> = ({ theme }) => {
           path="/"
           element={
             settings.isSplash ? (
-              <Splash theme={theme} />
+              // <Splash theme={theme} />
+              <></>
             ) : (
               <Navigate to="/home" replace />
             )
           }
         />
-        {settings.isSplash && (
-          <Route path="/splash" element={<Splash theme={theme} />} />
-        )}
+        {/* {settings.isSplash && (
+          // <Route path="/splash" element={<Splash theme={theme} />} />
+        )} */}
         <Route path="/home" element={<Home theme={theme} />} />
         {/* <Route path="/education" element={<Education theme={theme} />} />
         <Route path="/experience" element={<Experience theme={theme} />} />
