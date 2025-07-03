@@ -42,7 +42,7 @@ const ExperienceCard: React.FC<ExperienceCardProps> = ({
         <div className="experience-card-logo-div">
           <img
             className="experience-card-logo"
-            src={`${import.meta.env.BASE_URL}./src/assets/images/education-experience/${experience.logo_path}`}
+            src={`/images/education-experience/${experience.logo_path}`}
             alt=""
           />
         </div>

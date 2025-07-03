@@ -46,7 +46,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, theme }) => {
                 transform: "scale(0.9)",
                 objectFit:"cover"
               }}
-              src={`${import.meta.env.BASE_URL}./src/assets/images/projects/${project.logo_path}`}
+              src={`/images/projects/${project.logo_path}`}
               alt={"project-logo"}
             />
           </div>
@@ -83,7 +83,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, theme }) => {
                 {project.description}
               </p>
               <p>
-                Tools used:
+                <b>Tools Used:</b>
               </p>
               <SoftwareSkill logos={project.tools} />
             {project.website_url && (

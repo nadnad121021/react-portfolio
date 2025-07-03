@@ -33,7 +33,7 @@ const SoftwareSkill: React.FC<SoftwareSkillProps> = ({ logos }) => {
               <img
                 className="skill-image"
                 style={logo.style}
-                src={`${import.meta.env.BASE_URL}skills/${logo.imageSrc}`}
+                src={`/skills/${logo.imageSrc}`}
                 alt={logo.skillName}
               />
             )}

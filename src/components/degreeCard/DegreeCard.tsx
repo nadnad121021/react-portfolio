@@ -36,7 +36,7 @@ const DegreeCard: React.FC<DegreeCardProps> = ({ degree, theme }) => {
                 maxHeight: "100%",
                 transform: "scale(0.9)",
               }}
-              src={`${import.meta.env.BASE_URL}./src/assets/images/education-experience/${degree.logo_path}`}
+              src={`/images/education-experience/${degree.logo_path}`}
               alt={degree.alt_name || "degree-logo"}
             />
           </div>

@@ -35,7 +35,7 @@ const Contact: React.FC<ContactProps> = ({ theme }) => {
                         height: "100%",
                         // transform: "scale(0.9)",
                     }}
-                    src={`${import.meta.env.BASE_URL}./src/assets/images/dan/${ContactData.profile_image_path}`}
+                    src={`/images/dan/${ContactData.profile_image_path}`}
                     alt={"degree-logo"}
                     />
                 </div>

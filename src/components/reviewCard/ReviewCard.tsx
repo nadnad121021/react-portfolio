@@ -37,7 +37,7 @@ const ReviewCard:  React.FC<ReviewCardProps> = ({
              <div className="review-card-logo-div">
                <img
                  className="review-card-logo"
-                 src={`${import.meta.env.BASE_URL}./src/assets/images/reviews/${review.profile_path}`}
+                 src={`/images/reviews/${review.profile_path}`}
                  alt=""
                />
              </div>
