@@ -1,0 +1,29 @@
+.review-header {
+  font-size: 40px;
+  line-height: 1.1;
+  font-family: "Google Sans Regular";
+  text-align: center;
+}
+
+.experience-accord {
+  margin: 50px;
+}
+
+.accord-panel {
+  font-family: "Google Sans Regular";
+}
+
+@media (max-width: 1380px) {
+  .review-header {
+    font-size: 35px;
+  }
+}
+
+@media (max-width: 768px) {
+  .review-header {
+    font-size: 30px;
+  }
+  .experience-accord {
+    margin: 20px;
+  }
+}
