@@ -1,69 +1,111 @@
-# React + TypeScript + Vite
+# 🚀 React Portfolio Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern and responsive portfolio website built using **React**, **TypeScript**, and **Vite**. This project showcases personal projects, skills, and achievements with clean UI and fast performance.
 
-Currently, two official plugins are available:
+The site is currently deployed on **Firebase Hosting** and will soon be integrated with a backend (e.g., for contact forms, dynamic content, etc.).
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## 🛠️ Tech Stack
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+| Tool          | Description                               |
+|---------------|-------------------------------------------|
+| React         | Frontend library for building UI          |
+| TypeScript    | Superset of JavaScript with type safety   |
+| Vite          | Build tool for faster development         |
+| Firebase Hosting | Static site hosting with CDN support  |
+| Node.js       | Required runtime for development          |
+| pnpm          | Fast, disk-efficient alternative to npm and yarn, used to manage project dependencies |
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+### 🔧 Node.js Version Required
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+- `Node.js >= 18.x`
+
+---
+
+## 🌐 Live Demo
+
+👉 **[View Deployed Site](https://danilo-alingasa.web.app)**
+
+---
+
+## 🚀 Deployment (Firebase Hosting)
+
+### 1. 🔧 Install Firebase CLI
+
+```bash
+npm install -g firebase-tools
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### 2. 🔑 Login to Firebase
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+firebase login
 ```
+
+### 3. 🏗️ Initialize Firebase Project
+
+Run this command in your project root:
+
+```bash
+firebase init
+```
+
+Choose the following options:
+- Hosting: Configure files for Firebase Hosting
+- Select your Firebase project or create a new one
+- Set `dist` (or `build`) as your public directory (for Vite it's usually `dist`)
+- Choose `Yes` for single-page app rewrite if using React Router
+- Choose `No` to not overwrite `index.html`
+
+### 4. ⚒️ Build Your Project
+
+```bash
+pnpm run deploy-build
+```
+
+This will generate the production-ready site in the `dist` folder.
+
+### 5. 🚀 Deploy to Firebase
+
+```bash
+firebase deploy
+```
+
+You will get a Firebase Hosting URL after successful deployment.
+
+---
+
+## 📦 Installation (For Local Development)
+
+```bash
+git clone https://github.com/nadnad121021/react-portfolio.git
+cd your-repo
+pnpm install
+pnpm run dev
+```
+
+---
+
+## 📬 Coming Soon: Backend Integration
+
+We will soon add support for:
+- `About`, `Contact`, and other dynamic sections
+- Contextual content stored in a backend database
+- APIs to send and store contact form submissions
+- Admin dashboard for content management
+
+Stay tuned!
+
+---
+
+## 📄 License
+
+This project is licensed under the [MIT License](LICENSE).
+
+---
+
+### 👤 Author
+
+Created by **Danilo Alingasa** – [LinkedIn](https://www.linkedin.com/in/danilo-alingasa-a727241a2/) | [GitHub](https://github.com/nadnad121021)
