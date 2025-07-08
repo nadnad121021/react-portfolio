@@ -5,13 +5,13 @@
   align-items: center;
 }
 
-.card-title {
+.degree-card-title {
   font-family: "Google Sans Medium";
   font-size: 23px;
   /* color: #000000; */
 }
 
-.card-subtitle {
+.degree-card-subtitle {
   font-family: "Google Sans Medium";
   font-size: 18px;
   /* color: #000000; */
@@ -19,7 +19,7 @@
   margin-bottom: 5px;
 }
 
-.card-img {
+.degree-card-img {
   width: 200px;
   height: auto;
   border-radius: 50%;
@@ -30,7 +30,7 @@
   box-shadow: 5px 5px 5px #d9dbdf;
 }
 
-.body-header {
+.degree-body-header {
   max-width: inherit;
   display: flex;
   /* width: 100%; */
@@ -39,15 +39,15 @@
   padding: 10px;
 }
 
-.body-header-title {
+.degree-body-header-title {
   align-items: flex-start;
   width: 80%;
 }
 
-.body-header-duration {
+.degree-body-header-duration {
   width: 20%;
 }
-.duration {
+.degree-duration {
   font-family: "Google Sans Regular";
   font-size: 16px;
   /* color: #212121; */
@@ -55,7 +55,7 @@
   float: right;
 }
 
-.body-content {
+.degree-body-content {
   max-width: inherit;
   /* width: 100%; */
   border-radius: 0px 0px 7px 7px;
@@ -65,13 +65,13 @@
   /* box-shadow: 5px 5px 5px #d3d3d3; */
 }
 
-.content-list {
+.degree-content-list {
   padding-left: 10px;
   padding-right: 10px;
   font-family: "Google Sans Regular";
 }
 
-.card-body {
+.degree-card-body {
   /* background-color: #00FF00; */
   border-bottom: 1px solid #d9dbdf;
   border-left: 1px solid #d9dbdf;
@@ -81,7 +81,7 @@
   box-shadow: 5px 5px 5px #d9dbdf;
 }
 
-.visit-btn {
+.degree-visit-btn {
   /* background-color: #6c63ff99; */
   display: inline-block;
   margin: 0px 10px 10px 0px;
@@ -91,11 +91,11 @@
   /* flex-direction: column-reverse; */
 }
 
-.visit-btn:hover {
+.degree-visit-btn:hover {
   /* background-color:#6c63ffcc; */
 }
 
-.btn {
+.degree-btn {
   margin: 0px;
   padding: 0px;
   font-family: "Google Sans Regular";
@@ -110,39 +110,39 @@
     flex-direction: column;
   }
 
-  .body-header {
+  .degree-body-header {
     flex-direction: column;
   }
 
-  .body-header-title {
+  .degree-body-header-title {
     width: 100%;
   }
 
-  .body-header-duration {
+  .degree-body-header-duration {
     padding: 0;
     margin: 0;
     width: 100%;
   }
 
-  .duration {
+  .degree-duration {
     padding: 0px;
     margin: 0px;
     float: left;
   }
 
-  .card-img {
+  .degree-card-img {
     width: 200px;
   }
 
-  .card-body {
+  .degree-card-body {
     width: 100% !important;
   }
 
-  .card-title {
+  .degree-card-title {
     font-size: 20px;
   }
 
-  .card-subtitle {
+  .degree-card-subtitle {
     font-size: 16px;
   }
 }

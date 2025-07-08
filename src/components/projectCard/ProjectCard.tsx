@@ -55,7 +55,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, theme }) => {
       <Fade direction="right" duration={2000}>
         <div
           className="card-body"
-          style={{ width: project.logo_path ? "90%" : "100%" }}
+          style={{ width:  "100%" }}
         >
           <div
             className="body-header"

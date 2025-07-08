@@ -1,11 +1,8 @@
 import React from "react";
-interface EducationAndExperienceProps {
-  theme: {
-    text: string;
-    [key: string]: string;
-  }
+interface EducationExperienceImgProps {
+  theme: any
 }
-const EducationAndExperience: React.FC<EducationAndExperienceProps> = ({ theme }) => {
+const EducationExperienceImg: React.FC<EducationExperienceImgProps> = ({ theme }) => {
   return (
     <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="707.8" height="707.8" viewBox="0 0 707.8 707.8">
       <path d="M0 0h707.8v707.8H0z" fill={theme.body} />
@@ -21,4 +18,4 @@ const EducationAndExperience: React.FC<EducationAndExperienceProps> = ({ theme }
   );
 }
 
-export default EducationAndExperience
+export default EducationExperienceImg

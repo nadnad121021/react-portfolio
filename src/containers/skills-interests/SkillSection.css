@@ -1,6 +1,13 @@
+.skills-main {
+  width: 100%;
+  padding: 20px 10px;
+  margin: 0px auto;
+  margin-top: 1rem;
+}
 .skills-main-div {
   display: flex;
   /* overflow: hidden; */
+  max-width: 100%;
 }
 
 .skills-header {

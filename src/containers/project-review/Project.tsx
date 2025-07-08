@@ -1,37 +1,33 @@
 import React from "react";
-import "./Project.css";
+import "./Review.css";
 import { projects } from "../../portfolio";
 import { Fade } from "react-awesome-reveal";
 import ProjectCard from "../../components/projectCard/ProjectCard";
 
-type Theme = {
-  text: string;
-  headerColor: string;
-  [key: string]: string;
-
-};
-
-interface ProjectsProps {
-  theme: Theme;
+interface ReviewProps {
+  theme: any;
 }
 
-const Project: React.FC<ProjectsProps> = ({ theme }) => {
+const Review: React.FC<ReviewProps> = ({ theme }) => {
   return (
-    <div className="main" id="project">
-      <div className="projects-header-div">
+    <div className="main" id="review">
+      <div className="review-header-div">
         <Fade direction="down" duration={2000}>
-          <h1 className="projects-header" style={{ color: theme.text }}>
+          <h1 className="review-header" style={{ color: theme.text }}>
             Previous Shool & Intership Projects
           </h1>
         </Fade>
       </div>
-      <div className="projects-body-div">
-        {projects.map((project, index) => (
-          <ProjectCard key={index} project={project} theme={theme} />
-        ))}
+      <div className="review-body-div">
+        <div className="experience-accord">
+            {projects.map((project, index) => (
+              <ProjectCard key={index} project={project} theme={theme} />
+           ))}
+        </div>
       </div>
     </div>
-  );
-};
 
-export default Project;
+  );
+}
+
+export default Review;

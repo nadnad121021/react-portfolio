@@ -1,20 +1,15 @@
-/* Change this file to get your personal Porfolio */
-
 // Website related settings
 const settings = {
   isSplash: false, // Change this to false if you don't want Splash screen.
 };
 
-//SEO Related settings
-const seo = {
+//project infrmation
+const projectInfo = {
   title: "Danilo Alingasa's Portfolio",
-  description:
-    "",
-  og: {
-    title: "Portfolio",
-    type: "website",
-    url: "",
-  },
+  description:"",
+  tools: ["React", "Vite", "TypeScript", "Pnpm"],
+  deployedOn: "Firebase",
+  repoLink: "https://github.com/nadnad121021/react-portfolio"
 };
 
 //Home Page
@@ -50,7 +45,7 @@ const aboutMe = [
 const socialMediaLinks = [
   {
     name: "Github",
-    link: "",
+    link: "https://github.com/nadnad121021",
     fontAwesomeIcon: "fa-github",
     backgroundColor: "#181717",
   },
@@ -151,7 +146,7 @@ const skills = {
       title: "Cloud Infrastructure & DevOps",
       fileName: "CloudInfraImg",
       skills: [
-        "⚡ Deploying and scaling applications on AWS using EC2 and S3",
+        "⚡ Deploying and scaling applications on AWS using ECS & ECR or EC2",
         "⚡ Automating deployment pipelines using GitHub Actions and Docker",
         "⚡ Monitoring and optimizing performance of cloud applications",
       ],
@@ -209,48 +204,110 @@ const skills = {
         },
       ],
     },
-    {
-      title: "Other Interests & Learning Goals",
-      fileName: "OtherInterestImg",
-      skills: [
-        "⚡ Exploring other frameworks and ecosystems to broaden development skills",
-        "⚡ Interested in learning and building with backend and strongly typed languages",
-        "⚡ Staying curious about full-stack solutions across different stacks",
-      ],
-      softwareSkills: [
-        {
-          skillName: "Angular",
-          fontAwesomeClassname: "simple-icons:angular",
-          style: { color: "#DD0031" },
-        },
-        {
-          skillName: "Java",
-          fontAwesomeClassname: "devicon-plain:java",
-          style: { color: "#007396" },
-        },
-        {
-          skillName: "Python",
-          fontAwesomeClassname: "simple-icons:python",
-          style: { color: "#3776AB" },
-        },
-        {
-          skillName: "Laravel",
-          fontAwesomeClassname: "simple-icons:laravel",
-          style: { color: "#FF2D20" },
-        },
-        {
-          skillName: "MySQL",
-          fontAwesomeClassname: "simple-icons:mysql",
-          style: { color: "#4479A1" },
-        },
-        {
-          skillName: "C#",
-          fontAwesomeClassname: "simple-icons:csharp",
-          style: { color: "#239120" },
-        },
-      ],
-    }
+  ],
+};
 
+const otherInterests = {
+  title: "Other Interests & Learning Goals",
+  fileName: "OtherInterestImg",
+  descriptions: [
+    "⚡ Exploring other frameworks and ecosystems to broaden my development expertise.",
+    "⚡ Eager to deepen knowledge in backend technologies and strongly typed languages.",
+    "⚡ Staying curious and open to full-stack solutions across modern architectures.",
+    "⚡ Learning cloud technologies, containerization, and DevOps practices.",
+    "⚡ Interested in system design and scalable distributed systems.",
+  ],
+  data: [
+    {
+      login: "Angular",
+      avatarUrl: "https://avatars.githubusercontent.com/u/14957082?v=4",
+      fontAwesomeClassname: "simple-icons:angular",
+      style: { color: "#DD0031" },
+    },
+    {
+      login: "Java",
+      avatarUrl: "https://avatars1.githubusercontent.com/u/260832?v=4",
+      fontAwesomeClassname: "devicon-plain:java",
+      style: { color: "#007396" },
+    },
+    {
+      login: "Python",
+      avatarUrl: "https://avatars3.githubusercontent.com/u/1525981?v=4",
+      fontAwesomeClassname: "simple-icons:python",
+      style: { color: "#3776AB" },
+    },
+    {
+      login: "Laravel",
+      avatarUrl: "https://avatars.githubusercontent.com/u/958072?v=4",
+      fontAwesomeClassname: "simple-icons:laravel",
+      style: { color: "#FF2D20" },
+    },
+    {
+      login: "MySQL",
+      avatarUrl: "https://avatars.githubusercontent.com/u/11823761?v=4",
+      fontAwesomeClassname: "simple-icons:mysql",
+      style: { color: "#4479A1" },
+    },
+    {
+      login: "C#",
+      avatarUrl: "https://avatars.githubusercontent.com/u/9141961?v=4",
+      fontAwesomeClassname: "simple-icons:csharp",
+      style: { color: "#239120" },
+    },
+    {
+      login: "Rust",
+      avatarUrl: "https://avatars.githubusercontent.com/u/5430905?v=4",
+      fontAwesomeClassname: "simple-icons:rust",
+      style: { color: "#000000" },
+    },
+    {
+      login: "Go",
+      avatarUrl: "https://avatars.githubusercontent.com/u/4314092?v=4",
+      fontAwesomeClassname: "simple-icons:go",
+      style: { color: "#00ADD8" },
+    },
+    {
+      login: "Docker",
+      avatarUrl: "https://avatars.githubusercontent.com/u/5429470?v=4",
+      fontAwesomeClassname: "simple-icons:docker",
+      style: { color: "#2496ED" },
+    },
+    {
+      login: "Kubernetes",
+      avatarUrl: "https://avatars.githubusercontent.com/u/13629408?v=4",
+      fontAwesomeClassname: "simple-icons:kubernetes",
+      style: { color: "#326CE5" },
+    },
+    {
+      login: "GraphQL",
+      avatarUrl: "https://avatars.githubusercontent.com/u/12972006?v=4",
+      fontAwesomeClassname: "simple-icons:graphql",
+      style: { color: "#E10098" },
+    },
+    // {
+    //   login: "Firebase",
+    //   avatarUrl: "https://avatars.githubusercontent.com/u/1335026?v=4",
+    //   fontAwesomeClassname: "simple-icons:firebase",
+    //   style: { color: "#FFCA28" },
+    // },
+    {
+      login: "Next.js",
+      avatarUrl: "https://avatars.githubusercontent.com/u/14985020?v=4",
+      fontAwesomeClassname: "simple-icons:nextdotjs",
+      style: { color: "#000000" },
+    },
+    {
+      login: "Redis",
+      avatarUrl: "https://avatars.githubusercontent.com/u/1529926?v=4",
+      fontAwesomeClassname: "simple-icons:redis",
+      style: { color: "#DC382D" },
+    },
+    {
+      login: "Spring",
+      avatarUrl: "https://avatars.githubusercontent.com/u/317776?v=4",
+      fontAwesomeClassname: "simple-icons:spring",
+      style: { color: "#6DB33F" },
+    },
   ],
 };
 
@@ -276,13 +333,13 @@ const degrees = {
 // Experience Page
 const experience = {
   title: "Experience",
-  subtitle: "Work, Internship and Volunteership",
+  subtitle: "Work and Internship",
   description:
     "I've contributed to innovative startups and established companies as a Software Engineer.",
   header_image_path: "experience.svg",
   sections: [
     {
-      title: "Work",
+      title: "Work Experience",
       work: true,
       experiences: [
         {
@@ -321,7 +378,7 @@ const experience = {
       ],
     },
     {
-      title: "Internships",
+      title: "Internship Experience",
       experiences: [
         {
           title: "Application Developer",
@@ -516,11 +573,12 @@ const contact = {
 };
 export {
   settings,
-  seo,
+  projectInfo,
   greeting,
   aboutMe,
   socialMediaLinks,
   skills,
+  otherInterests,
   degrees,
   experience,
   reviews,

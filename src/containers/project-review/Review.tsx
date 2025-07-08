@@ -4,15 +4,8 @@ import { reviews } from "../../portfolio";
 import { Fade } from "react-awesome-reveal";
 import ReviewCard from "../../components/reviewCard/ReviewCard";
 
-
-interface Theme {
-  text: string;
-  headerColor: string;
-  [key: string]: string;
-}
-
 interface ReviewProps {
-  theme: Theme;
+  theme: any;
 }
 
 const Review: React.FC<ReviewProps> = ({ theme }) => {

@@ -1,5 +1,5 @@
 import React from "react";
-import "./Skills.css";
+import "./SkillSection.css";
 import SoftwareSkill from "../../components/softwareSkills/SoftwareSkill";
 import { skills } from "../../portfolio";
 import { Fade } from "react-awesome-reveal";
@@ -17,7 +17,7 @@ interface Theme {
 }
 
 interface SkillSectionProps {
-  theme: Theme;
+  theme: any;
 }
 
 interface SkillData {

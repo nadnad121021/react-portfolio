@@ -1,13 +1,13 @@
 /* header */
 
-.header {
+.main-header {
   display: block;
-  max-width: 90%;
+  max-width: 100%;
   padding: 20px 10px;
   margin: 0px auto;
 }
 
-.header ul {
+.main-header ul {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -18,19 +18,19 @@
   color: #868e96;
 }
 
-.header li a {
+.main-header li a {
   display: block;
   padding: 20px 20px;
   /* color: black; */
   text-decoration: none;
 }
 
-.header li a:hover,
-.header .menu-btn:hover {
+.main-header li a:hover,
+.main-header .menu-btn:hover {
   /* background-color: #A6E1FA; */
 }
 
-.header .logo {
+.main-header .logo {
   display: block;
   float: left;
   font-size: 1.5em;
@@ -38,7 +38,7 @@
   margin-top: 10px;
   line-height: normal;
 }
-.header .logo-name {
+.main-header .logo-name {
   font-family: "Agustina Regular";
   font-weight: bold;
   padding: 0 10px;
@@ -51,7 +51,7 @@
   font-family: "Google Sans Regular";
 }
 
-.header .menu {
+.main-header .menu {
   clear: both;
   max-height: 0;
   transition: max-height 0.2s ease-out;
@@ -59,7 +59,7 @@
 
 /* menu icon */
 
-.header .menu-icon {
+.main-header .menu-icon {
   cursor: pointer;
   display: inline-block;
   float: right;
@@ -68,7 +68,7 @@
   user-select: none;
 }
 
-.header .menu-icon .navicon {
+.main-header .menu-icon .navicon {
   background: #333;
   display: block;
   height: 2px;
@@ -77,8 +77,8 @@
   width: 18px;
 }
 
-.header .menu-icon .navicon:before,
-.header .menu-icon .navicon:after {
+.main-header .menu-icon .navicon:before,
+.main-header .menu-icon .navicon:after {
   background: #333;
   content: "";
   display: block;
@@ -88,80 +88,61 @@
   width: 100%;
 }
 
-.header .menu-icon .navicon:before {
+.main-header .menu-icon .navicon:before {
   top: 5px;
 }
 
-.header .menu-icon .navicon:after {
+.main-header .menu-icon .navicon:after {
   top: -5px;
 }
 
 /* menu btn */
 
-.header .menu-btn {
+.main-header .menu-btn {
   display: none;
 }
 
-.header .menu-btn:checked ~ .menu {
+.main-header .menu-btn:checked ~ .menu {
   max-height: 370px;
 }
 
-.header .menu-btn:checked ~ .menu-icon .navicon {
+.main-header .menu-btn:checked ~ .menu-icon .navicon {
   background: transparent;
 }
 
-.header .menu-btn:checked ~ .menu-icon .navicon:before {
+.main-header .menu-btn:checked ~ .menu-icon .navicon:before {
   transform: rotate(-45deg);
 }
 
-.header .menu-btn:checked ~ .menu-icon .navicon:after {
+.main-header .menu-btn:checked ~ .menu-icon .navicon:after {
   transform: rotate(45deg);
 }
 
-.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
-.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+.main-header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+.main-header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
   top: 0;
 }
 
 /* 48em = 768px */
 
 @media (min-width: 48em) {
-  .header li {
+  .main-header li {
     float: left;
   }
-  .header {
+  .main-header {
     display: flex;
     align-items: center;
     justify-content: space-between;
   }
-  .header .menu {
+  .main-header .menu {
     max-height: none;
   }
-  .header .menu-icon {
+  .main-header .menu-icon {
     display: none;
   }
 }
 @media (max-width: 960px) and (min-width: 768px) {
-  .header {
+  .main-header {
     font-size: 12px;
   }
-}
-
-.fixed-header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background-color: inherit;
-  z-index: 1000;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  display: block;
-  max-width: 90%;
-  padding: 20px 10px;
-  margin: 0px auto;
-}
-
-/* prevent layout shift by adding top padding to body or main container */
-body.has-fixed-header {
-  padding-top: 80px; /* adjust based on header height */
 }

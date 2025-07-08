@@ -1,48 +1,35 @@
 import React from "react";
 import "./EducationAndExperience.css";
-// import { degrees } from "../../portfolio";
 import { Fade } from "react-awesome-reveal";
-import Education from "./Edcucation";
-import EducationAndExperienceImg from "./EducationAndExperienceImg";
 import Experience from "./Experience";
-// import DegreeCard from "../../components/degreeCard/DegreeCard";
+import Education from "./Education";
+import EducationExperienceImg from "./EducationExperienceImg";
 
-type Theme = {
-  text: string;
-  headerColor: string;
-  [key: string]: string;
-
-};
-
-interface EducationsProps {
-  theme: Theme;
+interface EducationAndExperienceProps {
+  theme: any;
 }
 
-const EducationAndExperience: React.FC<EducationsProps> = ({ theme }) => {
+const EducationAndExperience: React.FC<EducationAndExperienceProps> = ({ theme }) => {
   return (
-    <div className="education-main" id="education-experience">
-        <div className="basic-education">
-          <Fade direction="down" duration={2000} >
-            <div className="heading-div">
-              <div className="heading-img-div">
-                <EducationAndExperienceImg theme={theme} />
-              </div>
+    <div className="education-experience-main" id="education-experience">
+      <div className="basic-education-experience-review">
+        <Fade direction="right" duration={1000} >
+          <div className="heading-div">
+            <div className="heading-img-div">
+              <EducationExperienceImg theme={theme} />
               <div className="heading-text-div">
                 <h1 className="heading-text" style={{ color: theme.text }}>
                   Education & Experience
                 </h1>
-                <h3 className="heading-sub-text" style={{ color: theme.text }}>
-                  Qualifications and Experience Overview
-                  {/* An overview of my educational achievements and work experience, reflecting the knowledge and skills acquired throughout my career. */}
-                </h3>
-                {/* <CompetitiveSites logos={competitiveSites.competitiveSites} /> */}
+                Qualifications and Experience Overview
               </div>
             </div>
-          </Fade>
-          <Education theme={theme} />
-          <Experience theme={theme} />
-        </div>
+          </div>
+        </Fade>
+        <Education theme={theme} />
+        <Experience theme={theme} />
       </div>
+    </div>
   );
 };
 

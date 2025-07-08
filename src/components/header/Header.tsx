@@ -5,11 +5,7 @@ import { NavLink } from "react-router-dom";
 import { greeting, settings } from "../../portfolio";
 
 interface HeaderProps {
-  theme: {
-    text: string;
-    body: string;
-    highlight: string;
-  };
+  theme: any
 }
 
 const onMouseEnter = (event: React.MouseEvent<HTMLAnchorElement>, color: string) => {
@@ -28,16 +24,16 @@ const Header: React.FC<HeaderProps> = ({ theme }) => {
   const navLinks = [
     { path: "/home", label: "Home" },
     // { path: "/about", label: "About Me" },
+    { path: "/skills-Interests", label: "Skills & Interests" },
     { path: "/education-experience", label: "Education & Experience" },
-    // { path: "/experience", label: "Experience" },
-    { path: "/reviews", label: "Reviews" },
+    { path: "/projects-reviews", label: "Project & Reviews" },
     { path: "/contact", label: "Contact Me" },
   ];
 
   return (
     <Fade direction="down" duration={1000} triggerOnce>
       <div>
-        <header className="header">
+        <header className="main-header">
           <NavLink to={link} className="logo">
             <span style={{ color: theme.text }}> {"{ "}</span>
             <span className="logo-name" style={{ color: theme.text }}>

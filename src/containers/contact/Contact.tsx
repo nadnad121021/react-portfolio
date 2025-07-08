@@ -5,9 +5,9 @@ import { Fade } from "react-awesome-reveal";
 import "./Contact.css";
 import { greeting,contact } from "../../portfolio";
 import AddressImg from "./AddressImg";
+import { useScreenSize } from "../../utils/useScreenSize";
 
 const ContactData = contact.contactSection;
-// const blogSection = contactPageData.blogSection;
 const addressSection = contact.addressSection;
 
 type Theme = {
@@ -22,8 +22,9 @@ interface ContactProps {
 }
 
 const Contact: React.FC<ContactProps> = ({ theme }) => {
+   const { width } = useScreenSize();
   return (
-    <div className="contact-main" id="contact">
+    <div className="contact-main" id="contact" style={{ width:`${width-10}px`}}>
       <div className="basic-contact">
         <Fade direction="right" duration={1000}>
           <div className="contact-heading-div">
@@ -86,9 +87,6 @@ const Contact: React.FC<ContactProps> = ({ theme }) => {
           </div>
         </Fade>
       </div>
-
-      {/* <Footer theme={theme} onToggle={onToggle} /> */}
-      {/* <TopButton theme={theme} /> */}
     </div>
   );
 };
