@@ -2,16 +2,10 @@ import React from "react";
 import "./OtherInterestList.css";
 import { Fade } from "react-awesome-reveal";
 import CustomTooltip from "../toolTip/CustomTooltip";
-
-type Logo = {
-  login: string;
-  avatarUrl: string;
-  fontAwesomeClassname: string
-  style: { color: string },
-};
+import type { IOtherInterestData } from "../../interfaces/portfolioInfo.interface";
 
 type OtherInterestListProps = {
-  logos: Logo[];
+  logos: IOtherInterestData[];
 };
 
 const OtherInterestList: React.FC<OtherInterestListProps> = ({ logos }) => {

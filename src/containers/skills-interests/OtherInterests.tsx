@@ -1,8 +1,9 @@
 import React from "react";
 import "./Experience.css";
-import { otherInterests } from "../../portfolio";
 import { Fade } from "react-awesome-reveal";
 import OtherInterestList from "../../components/otherInterestList/OtherInterestList";
+import { usePortfolio } from "../../context/PortfolioContext";
+import type { TPortfolioInfo } from "../../interfaces/portfolioInfo.interface";
 
 
 interface OtherInterestsProps {
@@ -10,6 +11,8 @@ interface OtherInterestsProps {
 }
 
 const OtherInterests: React.FC<OtherInterestsProps> = ({ theme }) => {
+  const { portfolio } = usePortfolio();
+  const { otherInterests} = portfolio as TPortfolioInfo
   return (
     <div className="main" id="review">
       <div className="review-header-div">

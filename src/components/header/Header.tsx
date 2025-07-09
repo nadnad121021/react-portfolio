@@ -2,7 +2,8 @@ import React from "react";
 import "./Header.css";
 import { Fade } from "react-awesome-reveal";
 import { NavLink } from "react-router-dom";
-import { greeting, settings } from "../../portfolio";
+import { usePortfolio } from '../../context/PortfolioContext';
+import type { TPortfolioInfo } from "../../interfaces/portfolioInfo.interface";
 
 interface HeaderProps {
   theme: any
@@ -19,11 +20,13 @@ const onMouseOut = (event: React.MouseEvent<HTMLAnchorElement>) => {
 };
 
 const Header: React.FC<HeaderProps> = ({ theme }) => {
+   const { portfolio } = usePortfolio();
+   const {settings ,greeting } = portfolio as TPortfolioInfo
+
   const link = settings.isSplash ? "/splash" : "/home";
 
   const navLinks = [
     { path: "/home", label: "Home" },
-    // { path: "/about", label: "About Me" },
     { path: "/skills-Interests", label: "Skills & Interests" },
     { path: "/education-experience", label: "Education & Experience" },
     { path: "/projects-reviews", label: "Project & Reviews" },

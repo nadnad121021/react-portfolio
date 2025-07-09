@@ -3,12 +3,10 @@ import SocialMedia from "../../components/socialMedia/SocialMedia";
 import Button from "../../components/button/Button";
 import { Fade } from "react-awesome-reveal";
 import "./Contact.css";
-import { greeting,contact } from "../../portfolio";
 import AddressImg from "./AddressImg";
 import { useScreenSize } from "../../utils/useScreenSize";
-
-const ContactData = contact.contactSection;
-const addressSection = contact.addressSection;
+import { usePortfolio } from "../../context/PortfolioContext";
+import type { TPortfolioInfo } from "../../interfaces/portfolioInfo.interface";
 
 type Theme = {
   text: string;
@@ -22,7 +20,11 @@ interface ContactProps {
 }
 
 const Contact: React.FC<ContactProps> = ({ theme }) => {
-   const { width } = useScreenSize();
+  const { portfolio } = usePortfolio();
+  const { greeting, contact } = portfolio as TPortfolioInfo
+  const ContactData = contact.contactSection;
+  const addressSection = contact.addressSection;
+  const { width } = useScreenSize();
   return (
     <div className="contact-main" id="contact" style={{ width:`${width-10}px`}}>
       <div className="basic-contact">

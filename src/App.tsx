@@ -5,15 +5,17 @@ import { ThemeProvider } from "styled-components";
 import { chosenTheme } from "./theme";
 import { GlobalStyles } from "./global";
 
+import { PortfolioProvider } from "./context/PortfolioContext";
+
 const App: React.FC = () => {
   return (
     <ThemeProvider theme={chosenTheme}>
-      <>
-        <GlobalStyles />
-        <div>
-        <MainContainer theme={chosenTheme} />
-        </div>
-      </>
+       <PortfolioProvider>
+          <GlobalStyles />
+          <div>
+          <MainContainer theme={chosenTheme} />
+          </div>
+       </PortfolioProvider>
     </ThemeProvider>
   );
 };

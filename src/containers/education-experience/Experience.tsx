@@ -1,8 +1,9 @@
 import React from "react";
 import "./Experience.css";
-import { experience } from "../../portfolio";
 import { Fade } from "react-awesome-reveal";
 import ExperienceCard from "../../components/experienceCard/ExperienceCard";
+import { usePortfolio } from "../../context/PortfolioContext";
+import type { TPortfolioInfo } from "../../interfaces/portfolioInfo.interface";
 
 
 interface ExperienceProps {
@@ -10,6 +11,8 @@ interface ExperienceProps {
 }
 
 const Experience: React.FC<ExperienceProps> = ({ theme }) => {
+  const { portfolio } = usePortfolio();
+  const { experience } = portfolio as TPortfolioInfo
   return (
     <div className="main" id="review">
       {experience.sections.map((section,i) => (

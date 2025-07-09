@@ -1,13 +1,15 @@
 import React, { useEffect, useState } from "react";
 import "./ProjectInfoButton.css";
-import { projectInfo } from "../../portfolio";
+import { usePortfolio } from "../../context/PortfolioContext";
+import type { TPortfolioInfo } from "../../interfaces/portfolioInfo.interface";
 
 type ProjectInfoButtonProps = {
   theme: any;
 };
 
 const ProjectInfoButton: React.FC<ProjectInfoButtonProps> = ({ theme }) => {
-  
+  const { portfolio } = usePortfolio();
+  const { projectInfo } = portfolio as TPortfolioInfo
   const [visible, setVisible] = useState(false);
 
   const scrollFunction = () => {

@@ -1,14 +1,17 @@
 import React from "react";
 import "./Education.css";
-import { degrees } from "../../portfolio";
 import { Fade } from "react-awesome-reveal";
 import DegreeCard from "../../components/degreeCard/DegreeCard";
+import { usePortfolio } from "../../context/PortfolioContext";
+import type { TPortfolioInfo } from "../../interfaces/portfolioInfo.interface";
 
 interface EducationProps {
   theme: any;
 }
 
 const Education: React.FC<EducationProps> = ({ theme }) => {
+  const { portfolio } = usePortfolio();
+  const { degrees } = portfolio as TPortfolioInfo
   return (
     <div className="main" id="project">
       <div className="projects-header-div">
@@ -19,7 +22,7 @@ const Education: React.FC<EducationProps> = ({ theme }) => {
         </Fade>
       </div>
       <div className="projects-body-div">
-        {degrees.degrees.map((degree, index) => (
+        {degrees.map((degree, index) => (
           <DegreeCard key={index} degree={degree} theme={theme} />
         ))}
       </div>

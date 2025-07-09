@@ -1,7 +1,8 @@
 import React from "react";
 import "./SocialMedia.css";
-import { socialMediaLinks } from "../../portfolio";
 import styled from "styled-components";
+import { usePortfolio } from "../../context/PortfolioContext";
+import type { TPortfolioInfo } from "../../interfaces/portfolioInfo.interface";
 
 interface SocialMediaProps {
   theme: {
@@ -32,6 +33,9 @@ const IconWrapper = styled.span<{ backgroundcolor: string; theme: SocialMediaPro
 `;
 
 const SocialMedia: React.FC<SocialMediaProps> = ({ theme }) => {
+  const { portfolio } = usePortfolio();
+  const { socialMediaLinks } = portfolio as TPortfolioInfo
+
   return (
     <div className="social-media-div">
       {socialMediaLinks.map((media: MediaItem, i: number) => (

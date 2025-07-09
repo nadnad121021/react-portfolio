@@ -1,13 +1,14 @@
 import React from "react";
 import "./SkillSection.css";
 import SoftwareSkill from "../../components/softwareSkills/SoftwareSkill";
-import { skills } from "../../portfolio";
 import { Fade } from "react-awesome-reveal";
 import DataScienceImg from "./DataScienceImg";
 import FullStackImg from "./FullStackImg";
 import CloudInfraImg from "./CloudInfraImg";
 import ProjectImg from "./ProjectImg";
 import OtherInterestImg from "./OtherInterestImg";
+import { usePortfolio } from "../../context/PortfolioContext";
+import type { TPortfolioInfo } from "../../interfaces/portfolioInfo.interface";
 // import DesignImg from "./DesignImg";
 
 interface Theme {
@@ -49,6 +50,8 @@ const GetSkillSvg: React.FC<{ fileName: string; theme: Theme }> = ({
 };
 
 const SkillSection: React.FC<SkillSectionProps> = ({ theme }) => {
+  const { portfolio } = usePortfolio();
+  const { skills } = portfolio as TPortfolioInfo
   return (
     <>
       {skills.data.map((skill: SkillData, i: number) => (

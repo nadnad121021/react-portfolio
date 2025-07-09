@@ -2,7 +2,8 @@ import React from "react";
 import Headroom from "react-headroom";
 import "./Headerv2.css";
 // import ToggleSwitch from "../ToggleSwitch/ToggleSwitch";
-import { greeting } from "../../portfolio";
+import { usePortfolio } from "../../context/PortfolioContext";
+import type { TPortfolioInfo } from "../../interfaces/portfolioInfo.interface";
 
 interface HeaderProps {
   theme: {
@@ -13,6 +14,8 @@ interface HeaderProps {
   isFixed?:boolean
 }
 const HeaderV2: React.FC<HeaderProps> = ({ theme }) => {
+    const { portfolio } = usePortfolio();
+    const {greeting } = portfolio as TPortfolioInfo
 
   return (
     <Headroom >

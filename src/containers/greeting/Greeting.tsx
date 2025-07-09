@@ -2,9 +2,10 @@ import React from "react";
 import "./Greeting.css";
 import SocialMedia from "../../components/socialMedia/SocialMedia";
 import Button from "../../components/button/Button";
-import { greeting } from "../../portfolio";
-import { Fade } from "react-awesome-reveal"; // Updated since you're using `react-awesome-reveal` now
+import { Fade } from "react-awesome-reveal";
 import FeelingProud from "./FeelingProud";
+import { usePortfolio } from "../../context/PortfolioContext";
+import type { TPortfolioInfo } from "../../interfaces/portfolioInfo.interface";
 
 interface GreetingProps {
   theme: {
@@ -17,6 +18,8 @@ interface GreetingProps {
 }
 
 const Greeting: React.FC<GreetingProps> = ({ theme }) => {
+  const { portfolio } = usePortfolio();
+  const { greeting } = portfolio as TPortfolioInfo
   return (
     <Fade direction="up" duration={2000} triggerOnce>
       <div className="greet-main" id="greeting">

@@ -1,14 +1,17 @@
 import React from "react";
 import "./Review.css";
-import { projects } from "../../portfolio";
 import { Fade } from "react-awesome-reveal";
 import ProjectCard from "../../components/projectCard/ProjectCard";
+import { usePortfolio } from "../../context/PortfolioContext";
+import type { TPortfolioInfo } from "../../interfaces/portfolioInfo.interface";
 
 interface ReviewProps {
   theme: any;
 }
 
 const Review: React.FC<ReviewProps> = ({ theme }) => {
+  const { portfolio } = usePortfolio();
+  const { projects } = portfolio as TPortfolioInfo
   return (
     <div className="main" id="review">
       <div className="review-header-div">

@@ -1,9 +1,10 @@
 import React from "react";
 import "./About.css";
 import { Fade } from "react-awesome-reveal";
-import { aboutMe } from "../../portfolio";
 import Programmer from './Programmer'
 import Beginner from './Beginner'
+import { usePortfolio } from "../../context/PortfolioContext";
+import type { TPortfolioInfo } from "../../interfaces/portfolioInfo.interface";
 
 interface Theme {
   text: string;
@@ -36,6 +37,8 @@ const GetAboutMeSvg: React.FC<{ fileName: string; theme: Theme }> = ({
 };
 
 const About: React.FC<SkillsProps> = ({ theme }) => {
+  const { portfolio } = usePortfolio();
+  const { aboutMe } = portfolio as TPortfolioInfo
   return (
     <div className="main" id="about">
       <div className="about-header-div">

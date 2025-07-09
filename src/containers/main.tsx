@@ -13,17 +13,21 @@ import Home from "../pages/home/Home";
 // import Contact from "../pages/contact/ContactComponent";
 // import Projects from "../pages/projects/Projects";
 // import Error404 from "../pages/errors/error404/Error";
-import { settings } from "../portfolio";
 import SkillsAndInterests from "../pages/skills-interests/Skills-Interests";
 import ExperienceEducation from "../pages/education-experience/Education-Experience";
 import ProjectsAndReviews from "../pages/projects-reviews/Projects-Reviews";
 import ContactMe from "../pages/contact/Contact";
+import { usePortfolio } from "../context/PortfolioContext";
+import type { TPortfolioInfo } from "../interfaces/portfolioInfo.interface";
 
 interface MainContainerProps {
   theme: any;
 }
 
 const MainContainer: React.FC<MainContainerProps> = ({ theme }) => {
+  const { portfolio } = usePortfolio();
+   if (!portfolio) return null;
+  const { settings } = portfolio as TPortfolioInfo
   return (
     <BrowserRouter basename="/">
       <Routes>
